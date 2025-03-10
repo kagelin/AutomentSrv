@@ -1,0 +1,55 @@
+{
+    "siteUrl": "https://proxy-manage.dx259.com",
+    "gatewayUrl": "https://proxy-gateway.dx259.com",
+    "aesKey": "f7050f03f3ae43ab",
+    "merchantId": "878597836592201781",
+    "gatewayParams":{
+        "obApplication": "4",
+        "obClient": "1",
+        "obEncrypted": false,
+        "obSecretVersion": "v1.0.0"
+    },
+    "accounts": {
+        "cashyj": {
+            "userNameType": "1",
+            "userType": "1",
+            "proxyId":"1090326108518289461",
+            "proxyAccount": "mn10",
+            "cashPassword": "Zz111111",
+            "proxyPassword": "Zz111111",
+            "assistantAccount": "",
+            "assistantPassword": "",
+            "userId":"1090326108518289461",
+            "userName": "mn10",
+            "tableId": 2305843009214171519,
+            "tableCode":"D1101857387720030259",
+            "tableId_13card":3746994889972730241,
+            "tableCode_13card":"",
+            "clubId": "null"
+        },
+        "cashzc": {
+            "userNameType": "1",
+            "userType": "1",
+            "proxyId":"1085544559930320964",
+            "proxyAccount": "atofphtd",
+            "cashPassword": "Abcd12345",
+            "proxyPassword": "Abcd12345",
+            "userId":"1085544559930320964",
+            "userName": "atofphtd",
+            "tableId": 0,
+            "tableCode":"",
+            "tableId_13card":0,
+            "tableCode_13card":"",
+            "clubId": ""
+        },
+        "credit": {
+            "userNameType": "",
+            "proxyId":"",
+            "proxyAccount": "",
+            "cashPassword": "",
+            "proxyPassword": "",
+            "assistantAccount": "",
+            "assistantPassword": "+"
+        }
+    }
+}
