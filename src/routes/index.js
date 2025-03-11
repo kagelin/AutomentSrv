@@ -6,7 +6,12 @@ import files from '../core/helpers/files.js';
 import express from 'express'; 
 import prce from 'child_process';
 var router = express.Router();
-
+var pytestCmds = [
+//'sh /Users/30fc0007/Documents/projects_vscode/AutomentSrv/test.sh',
+//'sh /Users/30fc0007/Documents/projects_vscode/AutomentSrv/test1.sh'
+'pytest /Users/30fc0083/Documents/agbe_autospider/ -vs -m "menu or create_proxy or logout"',
+'pytest /Users/30fc0083/Documents/agbe_autospider/ -vs -m "menu or create_proxy or logout"'
+];
 /* GET home page. */
 router.get('/', async function (req, res, next) {
 
@@ -80,11 +85,16 @@ router.get('/', async function (req, res, next) {
   res.render('index', { title: 'Automent Server' });
 });
 
-router.post('/pytest', async function (req, res, next) {
+router.post('/pytest/:id', async function (req, res, next) {
   console.log(req.body);
   let outMessage = '';
-  
-  prce.exec('sh /Users/30fc0007/Documents/projects_vscode/AutomentSrv/test.sh', (error, stdout, stderr) => {
+  const testId = parseInt(req.params.id, 10);;
+  if(testId > pytestCmds.length) {
+    res.send(`test id ${testId} 错误`);
+  }
+  const execCmd = pytestCmds[testId];
+
+  prce.exec(execCmd, (error, stdout, stderr) => {
     if (error) {
       console.error(`exec error: ${error}`);
       return;
@@ -94,6 +104,7 @@ router.post('/pytest', async function (req, res, next) {
     console.error(`stderr: ${stderr}`);
     res.send(`success ${outMessage}`);
   });
+  
   return;
   //res.send(`process ${child}`);
 });

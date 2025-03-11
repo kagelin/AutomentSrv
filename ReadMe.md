@@ -1,5 +1,9 @@
 # Automent Poc
 
+## 安装 Node
+
+<https://illacloud.com/zh/blog/nvm-use-2024/#%E5%AE%89%E8%A3%85nvm>  
+
 ## 专案建立步骤
 
 1. 安装 Express```npm install express --save```
